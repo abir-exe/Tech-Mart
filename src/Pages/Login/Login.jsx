@@ -1,16 +1,34 @@
 import { Link } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const Login = () => {
+  const { signIn } = useContext(AuthContext);
 
-    const handleLogin = (e) => {
-        e.preventDefault();
-        console.log(e.currentTarget);
-        const form = new FormData(e.currentTarget);
-        const email = form.get("email");
-        const password = form.get("password");
-        console.log(email, password);
+  const handleLogin = (e) => {
+    e.preventDefault();
+    console.log(e.currentTarget);
+    const form = new FormData(e.currentTarget);
+    const email = form.get("email");
+    const password = form.get("password");
+    console.log(email, password);
+
+    // sign in
+    signIn(email, password)
+      .then((result) => {
+        console.log(result.user);
+        
+      })
+      .catch((error) => {
+        console.error(error);
+        
+      });
+      
+    
     }
+
+  
   return (
     <div>
       <div className="w-4/5 md:3/4 lg:w-2/4 mx-auto py-20 border my-10 p-10">
