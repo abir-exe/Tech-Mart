@@ -21,7 +21,7 @@ const Featured = () => {
   return (
     <div className="my-20">
       <div className="text-center mb-10">
-        <h2 className="text-3xl font-semibold">Featured Categories</h2>
+        <h2 className="text-3xl font-semibold mb-3">Featured Categories</h2>
         <h2 className="text-xl">
           Get your desired product from featured category
         </h2>
