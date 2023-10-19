@@ -1,10 +1,12 @@
+import Marquee from "react-fast-marquee";
 
 
 const Header = () => {
     return (
-        <div>
+        <Marquee speed={100}>
+            <div>
             <div className="bg-[#ffffff] px-1 py-3">
-                <ul className="flex justify-between items-center">
+                <ul className="flex justify-between items-center space-x-3">
                 <li>Desktop</li>
                 <li>Laptop</li>
                 <li>Component</li>
@@ -27,6 +29,7 @@ const Header = () => {
 
             </div>
         </div>
+        </Marquee>
     );
 };
 
