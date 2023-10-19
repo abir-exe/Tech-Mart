@@ -3,7 +3,7 @@ import Marquee from "react-fast-marquee";
 
 const Header = () => {
     return (
-        <Marquee speed={100}>
+        <Marquee className=" mt-20 lg:mt-0" speed={100}>
             <div>
             <div className="bg-[#ffffff] px-1 py-3">
                 <ul className="flex justify-between items-center space-x-10">

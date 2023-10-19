@@ -1,36 +1,50 @@
 const AddProduct = () => {
+  const handleAddProduct = async (e) => {
+    e.preventDefault();
 
+    const form = e.target;
+    const name = form.name.value;
+    const brandName = form.brandName.value;
+    const image = form.image.value;
+    const price = form.price.value;
+    const description = form.description.value;
+    // const rating = form.rat.value;
+    // const radio = form.rad.value
 
-    const handleAddProduct = async (e) => {
-        e.preventDefault();
+    // console.log(name, email, password)
 
-        const form = e.target;
-        const name = form.name.value;
-        const brandName = form.brandName.value;
-        const image = form.image.value;
-        const price = form.price.value;
-        const description = form.description.value;
-        // const rating = form.rat.value;
-        // const radio = form.rad.value
-        
-        // console.log(name, email, password)
+    const myData = {
+      name,
+      brandName,
+      image,
+      price,
+      description,
+      // rating,
+      // radio,
+    };
+    console.log(myData);
 
-        const myData = {
-            name,
-            brandName,
-            image,
-            price,
-            description,
-            // rating,
-            // radio,
-        };
-        console.log(myData);
-    }
+    // for server
+    fetch("http://localhost:5000/users", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(myData),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
+  };
 
   return (
     <div className="w-3/6 mx-auto h-full">
       <h2 className="text-3xl text-center mt-10 mb-5">Add Product</h2>
-      <form onSubmit={handleAddProduct} className="card-body mb-10 border bg-[#f6f8fa]">
+      <form
+        onSubmit={handleAddProduct}
+        className="card-body mb-10 border bg-[#f6f8fa]"
+      >
         <div className="form-control">
           <label className="label">
             <span className="label-text">Name</span>
@@ -72,45 +86,25 @@ const AddProduct = () => {
         <div className="form-control">
           <label className="label cursor-pointer">
             <span className="label-text">Phone</span>
-            <input
-              type="radio"
-              name=" rad"
-              className="radio  :bg-blue-500"
-               
-            />
+            <input type="radio" name=" rad" className="radio  :bg-blue-500" />
           </label>
         </div>
         <div className="form-control">
           <label className="label cursor-pointer">
             <span className="label-text">Computer</span>
-            <input
-              type="radio"
-              name=" rad"
-              className="radio  :bg-blue-500"
-               
-            />
+            <input type="radio" name=" rad" className="radio  :bg-blue-500" />
           </label>
         </div>
         <div className="form-control">
           <label className="label cursor-pointer">
             <span className="label-text">Headphone</span>
-            <input
-              type="radio"
-              name=" rad"
-              className="radio  :bg-blue-500"
-               
-            />
+            <input type="radio" name=" rad" className="radio  :bg-blue-500" />
           </label>
         </div>
         <div className="form-control">
           <label className="label cursor-pointer">
             <span className="label-text">Accessories</span>
-            <input
-              type="radio"
-              name=" rad"
-              className="radio  :bg-blue-500"
-               
-            />
+            <input type="radio" name=" rad" className="radio  :bg-blue-500" />
           </label>
         </div>
         <div className="form-control">
@@ -139,8 +133,8 @@ const AddProduct = () => {
         </div>
         {/* rating  */}
         <label className="label">
-            <span className="label-text">Rating</span>
-          </label>
+          <span className="label-text">Rating</span>
+        </label>
         <div className="rating space-x-2">
           <input type="radio" name="rat" className="mask mask-star" />
           <input type="radio" name="rat" className="mask mask-star" />
@@ -157,4 +151,4 @@ const AddProduct = () => {
   );
 };
 
-export default AddProduct
+export default AddProduct;

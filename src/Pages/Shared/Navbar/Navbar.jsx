@@ -51,6 +51,7 @@ const Navbar = () => {
               {NavLinks}
             </ul>
           </div>
+          <img className="w-12 rounded-full" src="https://i.ibb.co/Nrx6n5P/Yellow-Modern-Gadget-Store-Logo.jpg" alt="" />
           <a className="btn btn-ghost normal-case text-xl">Tech Mart</a>
         </div>
         <div className="navbar-center hidden lg:flex">

@@ -7,7 +7,7 @@ const AboutUs = () => {
       <div className="hero min-h-screen bg-base-200 rounded-xl ">
         <div className="hero-content flex-col lg:flex-row">
           <img src={op} className="max-w-md rounded-lg shadow-2xl" />
-          <div className="ml-2">
+          <div className="lg:ml-2">
           <h2 className="text-3xl"> About US</h2>
             <p className="mb-5">
               TechMart is a One-Stop Tech Shop that offers Tech Enthusiasts
