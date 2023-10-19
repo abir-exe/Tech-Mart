@@ -1,8 +1,9 @@
-import appleLogo from "../../../../public/images/Apple-6176.png";
+/* eslint-disable react/prop-types */
+
 
 const Brands = ({brand}) => {
 
-  const {id, name, image} = brand || {};
+  const { name, image} = brand || {};
   console.log(brand);
 
   return (
