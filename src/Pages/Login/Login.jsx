@@ -1,10 +1,19 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
+import app from "../../FIrebase/Firebase.config";
+
+
+const auth = getAuth(app);
 
 const Login = () => {
-  const { signIn } = useContext(AuthContext);
+
+const provider = new GoogleAuthProvider();
+  const { signIn, googleSignIn } = useContext(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -19,13 +28,31 @@ const Login = () => {
       .then((result) => {
         console.log(result.user);
         
+        // navigate after login
+        navigate(location?.state ? location.state : "/");
+      
       })
       .catch((error) => {
         console.error(error);
         
       });
+
       
-    
+    }
+    // googleSignIn
+    const handleGoogle = () => {
+    signInWithPopup(auth, provider)
+    .then((result) => {
+        console.log(result.user);
+        
+        // navigate after login
+        navigate(location?.state ? location.state : "/");
+      
+      })
+      .catch((error) => {
+        console.error(error);
+        
+      });
     }
 
   
@@ -74,9 +101,9 @@ const Login = () => {
             Register
           </Link>
         </p>
-        <div className="flex text-sm md:text-md lg:text-xl justify-center items-center gap-2 border w-4/5 mx-auto px-3  py-2">
+        <div onClick={handleGoogle} className="flex text-sm md:text-md lg:text-xl justify-center items-center gap-2 border w-4/5 mx-auto px-3  py-2">
           <FcGoogle className="text-2xl"></FcGoogle>
-          <button className="">Login With google</button>
+          <button  className="">Login With google</button>
         </div>
       </div>
     </div>
