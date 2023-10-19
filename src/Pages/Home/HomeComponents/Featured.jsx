@@ -28,7 +28,7 @@ const Featured = () => {
       </div>
 <div className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-3">
       {/* card */}
-      <div className="card    bg-base-100 shadow-xl">
+      <div className="card    bg-[#f6f8fa]  ">
         <figure className="px-10 pt-10">
         <IconContext.Provider value={{ color: "", size: 90 }}>
         <FcSmartphoneTablet />
@@ -36,157 +36,157 @@ const Featured = () => {
           </IconContext.Provider>
         </figure>
         <div className="card-body items-center text-center">
-          <h2 className="      h-12">Phone and Tablet</h2></div>
+          <h2 className="       h-8">Phone and Tablet</h2></div>
       </div>
       {/* card */}
-      <div className="card    bg-base-100 shadow-xl">
+      <div className="card    bg-[#f6f8fa]  ">
         <figure className="px-10 pt-10">
         <IconContext.Provider value={{ color: "", size: 90 }}>
             < MdPower />
           </IconContext.Provider>
         </figure>
         <div className="card-body items-center text-center">
-          <h2 className="      h-12">Power Adapter</h2></div>
+          <h2 className="       h-8">Power Adapter</h2></div>
       </div>
       {/* card */}
-      <div className="card    bg-base-100 shadow-xl">
+      <div className="card    bg-[#f6f8fa]  ">
         <figure className="px-10 pt-10">
         <IconContext.Provider value={{ color: "", size: 90 }}>
             <IoIosLaptop />
           </IconContext.Provider>
         </figure>
         <div className="card-body items-center text-center">
-          <h2 className="      h-12">Macbook</h2></div>
+          <h2 className="       h-8">Macbook</h2></div>
       </div>
       {/* card */}
-      <div className="card    bg-base-100 shadow-xl">
+      <div className="card    bg-[#f6f8fa]  ">
         <figure className="px-10 pt-10">
         <IconContext.Provider value={{ color: "", size: 90 }}>
             <IoWatchOutline />
           </IconContext.Provider>
         </figure>
         <div className="card-body items-center text-center">
-          <h2 className="      h-12">SmartWatch</h2></div>
+          <h2 className="       h-8">SmartWatch</h2></div>
       </div>
       {/* card */}
-      <div className="card    bg-base-100 shadow-xl">
+      <div className="card    bg-[#f6f8fa]  ">
         <figure className="px-10 pt-10">
         <IconContext.Provider value={{ color: "", size: 90 }}>
             <TbDeviceAirpods />
           </IconContext.Provider>
         </figure>
         <div className="card-body items-center text-center">
-          <h2 className="      h-12">Airpods</h2></div>
+          <h2 className="       h-8">Airpods</h2></div>
       </div>
       {/* card */}
-      <div className="card    bg-base-100 shadow-xl">
+      <div className="card    bg-[#f6f8fa]  ">
         <figure className="px-10 pt-10">
         <IconContext.Provider value={{ color: "", size: 90 }}>
             <BsHeadphones />
           </IconContext.Provider>
         </figure>
         <div className="card-body items-center text-center">
-          <h2 className="      h-12">Overhead Headphones</h2></div>
+          <h2 className="       h-8">Overhead Headphones</h2></div>
       </div>
       {/* card */}
-      <div className="card    bg-base-100 shadow-xl">
+      <div className="card    bg-[#f6f8fa]  ">
         <figure className="px-10 pt-10">
         <IconContext.Provider value={{ color: "", size: 90 }}>
             <BsFillSpeakerFill />
           </IconContext.Provider>
         </figure>
         <div className="card-body items-center text-center">
-          <h2 className="      h-12">Speakers</h2></div>
+          <h2 className="       h-8">Speakers</h2></div>
       </div>
       {/* card */}
-      <div className="card    bg-base-100 shadow-xl">
+      <div className="card    bg-[#f6f8fa]  ">
         <figure className="px-10 pt-10">
         <IconContext.Provider value={{ color: "", size: 90 }}>
             <PiMusicNotesPlusBold />
           </IconContext.Provider>
         </figure>
         <div className="card-body items-center text-center">
-          <h2 className="      h-12">Wired Earphones</h2></div>
+          <h2 className="       h-8">Wired Earphones</h2></div>
       </div>
       {/* card */}
-      <div className="card    bg-base-100 shadow-xl">
+      <div className="card    bg-[#f6f8fa]  ">
         <figure className="px-10 pt-10">
         <IconContext.Provider value={{ color: "", size: 90 }}>
             <RiWirelessChargingFill />
           </IconContext.Provider>
         </figure>
         <div className="card-body items-center text-center">
-          <h2 className="      h-12">Wireles Earphone</h2></div>
+          <h2 className="       h-8">Wireles Earphone</h2></div>
       </div>
       {/* card */}
-      <div className="card    bg-base-100 shadow-xl">
+      <div className="card    bg-[#f6f8fa]  ">
         <figure className="px-10 pt-10">
         <IconContext.Provider value={{ color: "", size: 90 }}>
             <LuCable />
           </IconContext.Provider>
         </figure>
         <div className="card-body items-center text-center">
-          <h2 className="      h-12">Cable</h2></div>
+          <h2 className="       h-8">Cable</h2></div>
       </div>
       {/* card */}
-      <div className="card    bg-base-100 shadow-xl">
+      <div className="card    bg-[#f6f8fa]  ">
         <figure className="px-10 pt-10">
         <IconContext.Provider value={{ color: "", size: 90 }}>
             <GiGreenPower />
           </IconContext.Provider>
         </figure>
         <div className="card-body items-center text-center">
-          <h2 className="      h-12">PowerBank</h2></div>
+          <h2 className="       h-8">PowerBank</h2></div>
       </div>
       {/* card */}
-      <div className="card    bg-base-100 shadow-xl">
+      <div className="card    bg-[#f6f8fa]  ">
         <figure className="px-10 pt-10">
         <IconContext.Provider value={{ color: "", size: 90 }}>
             <RiBatteryChargeLine />
           </IconContext.Provider>
         </figure>
         <div className="card-body items-center text-center">
-          <h2 className="      h-12">Wireless Charger</h2></div>
+          <h2 className="       h-8">Wireless Charger</h2></div>
       </div>
       {/* card */}
-      <div className="card    bg-base-100 shadow-xl">
+      <div className="card    bg-[#f6f8fa]  ">
         <figure className="px-10 pt-10">
         <IconContext.Provider value={{ color: "", size: 90 }}>
             <MdOutlineHub />
           </IconContext.Provider>
         </figure>
         <div className="card-body items-center text-center">
-          <h2 className="      h-12">Hubs and Docks</h2></div>
+          <h2 className="       h-8">Hubs and Docks</h2></div>
       </div>
       {/* card */}
-      <div className="card    bg-base-100 shadow-xl">
+      <div className="card    bg-[#f6f8fa]  ">
         <figure className="px-10 pt-10">
         <IconContext.Provider value={{ color: "", size: 90 }}>
             <GrKeyboard />
           </IconContext.Provider>
         </figure>
         <div className="card-body items-center text-center">
-          <h2 className="      h-12">keyBoard</h2></div>
+          <h2 className="       h-8">keyBoard</h2></div>
       </div>
       {/* card */}
-      <div className="card    bg-base-100 shadow-xl">
+      <div className="card    bg-[#f6f8fa]  ">
         <figure className="px-10 pt-10">
         <IconContext.Provider value={{ color: "", size: 90 }}>
         <CiMobile3 />
           </IconContext.Provider>
         </figure>
         <div className="card-body items-center text-center">
-          <h2 className="      h-12">Covers</h2></div>
+          <h2 className="       h-8">Covers</h2></div>
       </div>
       {/* card */}
-      <div className="card    bg-base-100 shadow-xl">
+      <div className="card    bg-[#f6f8fa]  ">
         <figure className="px-10 pt-10">
         <IconContext.Provider value={{ color: "", size: 90 }}>
             <GiDeliveryDrone />
           </IconContext.Provider>
         </figure>
         <div className="card-body items-center text-center">
-          <h2 className="      h-12">Drone and Camera</h2></div>
+          <h2 className="       h-8">Drone and Camera</h2></div>
       </div>
       </div>
     </div>
