@@ -1,14 +1,43 @@
 const AddProduct = () => {
+
+
+    const handleAddProduct = async (e) => {
+        e.preventDefault();
+
+        const form = e.target;
+        const name = form.name.value;
+        const brandName = form.brandName.value;
+        const image = form.image.value;
+        const price = form.price.value;
+        const description = form.description.value;
+        // const rating = form.rat.value;
+        // const radio = form.rad.value
+        
+        // console.log(name, email, password)
+
+        const myData = {
+            name,
+            brandName,
+            image,
+            price,
+            description,
+            // rating,
+            // radio,
+        };
+        console.log(myData);
+    }
+
   return (
     <div className="w-3/6 mx-auto h-full">
       <h2 className="text-3xl text-center mt-10 mb-5">Add Product</h2>
-      <form className="card-body mb-10 border bg-[#f6f8fa]">
+      <form onSubmit={handleAddProduct} className="card-body mb-10 border bg-[#f6f8fa]">
         <div className="form-control">
           <label className="label">
             <span className="label-text">Name</span>
           </label>
           <input
             type="text"
+            name="name"
             placeholder="Name"
             className="input input-bordered"
             required
@@ -20,6 +49,7 @@ const AddProduct = () => {
           </label>
           <input
             type="text"
+            name="brandName"
             placeholder="Brand Name"
             className="input input-bordered"
             required
@@ -31,6 +61,7 @@ const AddProduct = () => {
           </label>
           <input
             type="text"
+            name="image"
             placeholder="Image URL"
             className="input input-bordered"
             required
@@ -43,9 +74,9 @@ const AddProduct = () => {
             <span className="label-text">Phone</span>
             <input
               type="radio"
-              name="radio-10"
-              className="radio checked:bg-blue-500"
-              checked
+              name=" rad"
+              className="radio  :bg-blue-500"
+               
             />
           </label>
         </div>
@@ -54,9 +85,9 @@ const AddProduct = () => {
             <span className="label-text">Computer</span>
             <input
               type="radio"
-              name="radio-10"
-              className="radio checked:bg-blue-500"
-              checked
+              name=" rad"
+              className="radio  :bg-blue-500"
+               
             />
           </label>
         </div>
@@ -65,9 +96,9 @@ const AddProduct = () => {
             <span className="label-text">Headphone</span>
             <input
               type="radio"
-              name="radio-10"
-              className="radio checked:bg-blue-500"
-              checked
+              name=" rad"
+              className="radio  :bg-blue-500"
+               
             />
           </label>
         </div>
@@ -76,9 +107,9 @@ const AddProduct = () => {
             <span className="label-text">Accessories</span>
             <input
               type="radio"
-              name="radio-10"
-              className="radio checked:bg-blue-500"
-              checked
+              name=" rad"
+              className="radio  :bg-blue-500"
+               
             />
           </label>
         </div>
@@ -88,6 +119,7 @@ const AddProduct = () => {
           </label>
           <input
             type="text"
+            name="price"
             placeholder="Price"
             className="input input-bordered"
             required
@@ -99,6 +131,7 @@ const AddProduct = () => {
           </label>
           <input
             type="text"
+            name="description"
             placeholder="Short Description"
             className="input input-bordered"
             required
@@ -109,11 +142,11 @@ const AddProduct = () => {
             <span className="label-text">Rating</span>
           </label>
         <div className="rating space-x-2">
-          <input type="radio" name="rating-1" className="mask mask-star" />
-          <input type="radio" name="rating-1" className="mask mask-star" />
-          <input type="radio" name="rating-1" className="mask mask-star" />
-          <input type="radio" name="rating-1" className="mask mask-star" />
-          <input type="radio" name="rating-1" className="mask mask-star" />
+          <input type="radio" name="rat" className="mask mask-star" />
+          <input type="radio" name="rat" className="mask mask-star" />
+          <input type="radio" name="rat" className="mask mask-star" />
+          <input type="radio" name="rat" className="mask mask-star" />
+          <input type="radio" name="rat" className="mask mask-star" />
         </div>
 
         <div className="form-control mt-6">
@@ -124,4 +157,4 @@ const AddProduct = () => {
   );
 };
 
-export default AddProduct;
+export default AddProduct
