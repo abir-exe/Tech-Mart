@@ -1,3 +1,5 @@
+import Swal from "sweetalert2";
+
 const AddProduct = () => {
   const handleAddProduct = async (e) => {
     e.preventDefault();
@@ -35,6 +37,11 @@ const AddProduct = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        Swal.fire(
+          'Product Added',
+          'Successfully added',
+          'success'
+        )
       });
   };
 

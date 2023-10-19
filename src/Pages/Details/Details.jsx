@@ -12,7 +12,7 @@ const Details = () => {
     <div>
       <div className="w-9/12 mx-auto my-10">
         {/* slider of offers  */}
-        <div className="carousel  h-[80vh] ">
+        <div className="carousel mb-10 h-[80vh] ">
           <div id="slide1" className="carousel-item relative w-full">
             <img src={p1} className="w-full" />
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -59,11 +59,11 @@ const Details = () => {
           </div>
         </div>
       </div>
-      <div>
-        <h2>User: {users.length}</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 my-10">
+        
         {users.map((user) => (
-          <div key={user._id}>
-            <div className="card w-96 bg-base-100 shadow-xl">
+          <div className="" key={user._id}>
+            <div className="card h-96 bg-base-100 shadow-xl mb-5">
               <figure>
                 <img
                 className="h-36"
