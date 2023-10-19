@@ -68,6 +68,12 @@ const Details = () => {
           </div>
         </div>
       </div>
+      <div>
+        <div className="bg-slate-400">
+            <h2 className="text-2xl">Product Card</h2>
+            <button className="btn">Details</button>
+        </div>
+      </div>
     </div>
   );
 };

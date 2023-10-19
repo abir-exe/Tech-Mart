@@ -3,6 +3,7 @@ import AboutUs from "./HomeComponents/AboutUs";
 import Banner from "./HomeComponents/Banner";
 import Brands from "./HomeComponents/Brands";
 import Featured from "./HomeComponents/Featured";
+import Marquee from "react-fast-marquee";
 
 const Home = () => {
   const brands = useLoaderData();
@@ -10,6 +11,9 @@ const Home = () => {
 
   return (
     <div>
+      <Marquee pauseOnHover={true} className=" py-2 mb-2">
+        All Kinds of Tech Solution.     We are now going through a period when technology brings the revolution. From dawn to dusk every moment in our life is connected to technology. Various kinds of smart gadgets become inseparable parts of our daily life. Consistent with the demand there is a huge gadget-selling market globally including Bangladesh.    
+      </Marquee>
       <Banner></Banner>
 
       <div className="my-10">

@@ -1,22 +1,19 @@
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
-
-    const NavLinks = (
-        <>
-          <li>
-            <NavLink to="/">Home</NavLink>
-          </li>
-          <li>
-            <NavLink to="/addProduct">Add Product</NavLink>
-          </li>
-          <li>
-            <NavLink to="/myCart">My Cart</NavLink>
-          </li>
-          
-        </>
-    );
-
+  const NavLinks = (
+    <>
+      <li>
+        <NavLink to="/">Home</NavLink>
+      </li>
+      <li>
+        <NavLink to="/addProduct">Add Product</NavLink>
+      </li>
+      <li>
+        <NavLink to="/myCart">My Cart</NavLink>
+      </li>
+    </>
+  );
 
   return (
     <div>
@@ -49,11 +46,14 @@ const Navbar = () => {
           <a className="btn btn-ghost normal-case text-xl">Tech Mart</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            {NavLinks}
-          </ul>
+          <ul className="menu menu-horizontal px-1">{NavLinks}</ul>
         </div>
         <div className="navbar-end">
+          <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+            <div className="w-10 rounded-full">
+              <img src="https://i.ibb.co/DY3jjPc/IMG-20230508-WA0013-01.jpg" />
+            </div>
+          </label>
           <a className="btn">Login</a>
         </div>
       </div>

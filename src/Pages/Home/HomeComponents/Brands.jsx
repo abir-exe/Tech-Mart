@@ -1,5 +1,7 @@
 /* eslint-disable react/prop-types */
 
+import { Link } from "react-router-dom";
+
 
 const Brands = ({brand}) => {
 
@@ -10,7 +12,7 @@ const Brands = ({brand}) => {
     <div className="my-10">
       
 
-      <div >
+      <Link to="/details">
         {/* card */}
         <div className="card bg-base-100 shadow-xl h-52">
           <figure>
@@ -20,7 +22,7 @@ const Brands = ({brand}) => {
             <h2 className="text-bold text-xl text-center p-2">{name}</h2>
           </div>
         </div>
-      </div>
+      </Link>
     </div>
   );
 };
