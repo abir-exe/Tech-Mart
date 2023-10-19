@@ -25,7 +25,9 @@ const router = createBrowserRouter([
             },
             {
                 path: '/details',
-                element: <PrivateRoute><Details></Details></PrivateRoute>
+                element: <PrivateRoute><Details></Details></PrivateRoute>,
+                loader: () => fetch(`http://localhost:5000/users`),
+
             },
             {
                 path:'/login',
