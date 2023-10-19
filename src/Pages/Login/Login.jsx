@@ -1,17 +1,20 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import app from "../../FIrebase/Firebase.config";
-
+import Swal from "sweetalert2";
 
 const auth = getAuth(app);
 
 const Login = () => {
 
-const provider = new GoogleAuthProvider();
-  const { signIn, googleSignIn } = useContext(AuthContext);
+  const [loginError, setLoginError] = useState("");
+  const [success, setSuccess] = useState("");
+
+  const provider = new GoogleAuthProvider();
+  const { signIn } = useContext(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -22,40 +25,48 @@ const provider = new GoogleAuthProvider();
     const email = form.get("email");
     const password = form.get("password");
     console.log(email, password);
+    setLoginError('');
+    setSuccess('');
 
     // sign in
     signIn(email, password)
       .then((result) => {
         console.log(result.user);
-        
+        setSuccess("Login Successful")
+        Swal.fire(
+            'Successfully logged in',
+            'Login Successful',
+            'success'
+          )
+
         // navigate after login
         navigate(location?.state ? location.state : "/");
-      
       })
       .catch((error) => {
         console.error(error);
+        setLoginError(error.message);
+        Swal.fire(
+            'Login Failed',
+            'Password/Email did not match',
+            'error'
+          )
         
       });
-
-      
-    }
-    // googleSignIn
-    const handleGoogle = () => {
+  };
+  // googleSignIn
+  const handleGoogle = () => {
     signInWithPopup(auth, provider)
-    .then((result) => {
+      .then((result) => {
         console.log(result.user);
-        
+
         // navigate after login
         navigate(location?.state ? location.state : "/");
-      
       })
       .catch((error) => {
         console.error(error);
-        
       });
-    }
+  };
 
-  
   return (
     <div>
       <div className="w-4/5 md:3/4 lg:w-2/4 mx-auto py-20 border my-10 p-10">
@@ -91,6 +102,9 @@ const provider = new GoogleAuthProvider();
             </label>
           </div>
 
+          {loginError && <p className="text-red-600"> {loginError} </p>}
+          {success && <p className="text-green-600">Login Successful</p>}
+
           <div className="form-control md:mt-3 lg:mt-6">
             <button className="btn btn-primary">Login</button>
           </div>
@@ -101,9 +115,12 @@ const provider = new GoogleAuthProvider();
             Register
           </Link>
         </p>
-        <div onClick={handleGoogle} className="flex text-sm md:text-md lg:text-xl justify-center items-center gap-2 border w-4/5 mx-auto px-3  py-2">
+        <div
+          onClick={handleGoogle}
+          className="flex text-sm md:text-md lg:text-xl justify-center items-center gap-2 border w-4/5 mx-auto px-3  py-2"
+        >
           <FcGoogle className="text-2xl"></FcGoogle>
-          <button  className="">Login With google</button>
+          <button className="">Login With google</button>
         </div>
       </div>
     </div>

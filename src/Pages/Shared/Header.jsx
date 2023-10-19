@@ -6,7 +6,7 @@ const Header = () => {
         <Marquee speed={100}>
             <div>
             <div className="bg-[#ffffff] px-1 py-3">
-                <ul className="flex justify-between items-center space-x-3">
+                <ul className="flex justify-between items-center space-x-10">
                 <li>Desktop</li>
                 <li>Laptop</li>
                 <li>Component</li>
