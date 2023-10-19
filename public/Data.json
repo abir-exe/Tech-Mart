@@ -1,0 +1,63 @@
+[
+    {
+      "id": 1,
+      "name": "Apple",
+      "image": "https://i.ibb.co/dQbKgCh/Apple-6176.png"
+      
+    },
+    {
+      "id": 2,
+      "name": "Google",
+      "image": "https://i.ibb.co/VStxBgg/Google-4283.png"
+    },
+    {
+      "id": 3,
+      "name": "Samsung",
+      "image": "https://i.ibb.co/xzvqCkj/Samsung-4680.png"
+    },
+    {
+      "id": 4,
+      "name": "One Plus",
+      "image": "https://i.ibb.co/vxVh1Mb/Oneplus-9091.png"
+    },
+    {
+      "id": 5,
+      "name": "Xiaomi",
+      "image": "https://i.ibb.co/R29F4Ck/Xiaomi-1934.png"
+    },
+    {
+      "id": 6,
+      "name": "Realme",
+      "image": "https://i.ibb.co/hMxRN0v/realme-logo-8426.png"
+    },
+    {
+      "id": 7,
+      "name": "Huawei",
+      "image": "https://i.ibb.co/8Mw9zdX/Huawei-3570.png"
+    },
+    {
+      "id": 8,
+      "name": "Vivo",
+      "image": "https://i.ibb.co/2gNRbrg/Vivo-4031.png"
+    },
+    {
+      "id": 9,
+      "name": "Intel",
+      "image": "https://i.ibb.co/G2dj7MH/intel.png"
+    },
+    {
+      "id": 10,
+      "name": "Playstation",
+      "image": "https://i.ibb.co/JQn5rLY/ps.png"
+    },
+    {
+      "id": 11,
+      "name": "Asus",
+      "image": "https://i.ibb.co/891sC8y/Asus-Logo.png"
+    },
+    {
+      "id": 12,
+      "name": "Xbox",
+      "image": "https://i.ibb.co/Ms6qNMW/xbox.jpg"
+    }
+  ]
