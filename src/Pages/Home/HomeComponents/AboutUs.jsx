@@ -27,12 +27,12 @@ const AboutUs = () => {
             </p>
             <h5 className="font-bold mb-3">Our Services:</h5>
             <div className="ml-6">
-                <li>Multichannel Shopping Center: Offline and Online </li>
-                <li>Official Website for Easy Navigation and Purchasing </li>
-                <li>Free Home Delivery </li>
-                <li>Nationwide Courier Service </li>
-                <li>Emergency 24 Hour/Same Day Delivery  </li>
-                <li>Pre-Order from Renowned E-Commerce site </li>
+                <li>Multichannel Shopping Center: Offline and Online. </li>
+                <li>Official Website for Easy Navigation and Purchasing. </li>
+                <li>Free Home Delivery. </li>
+                <li>Nationwide Courier Service. </li>
+                <li>Emergency 24 Hour/Same Day Delivery.  </li>
+                <li>Pre-Order from Renowned E-Commerce site. </li>
             </div>
           </div>
         </div>
