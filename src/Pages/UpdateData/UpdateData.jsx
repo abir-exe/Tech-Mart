@@ -169,7 +169,7 @@ const UpdateData = () => {
         </div>
 
         <div className="form-control mt-6">
-          <button className="btn glass outline">Update Product</button>
+          <button className="btn glass outline">Submit</button>
         </div>
       </form>
     </div>
