@@ -1,20 +1,39 @@
-const DetailsCard = () => {
+import { Link } from "react-router-dom";
+
+const DetailsCard = ({product}) => {
+
+console.log(product)
+
+const {name, brandName, image, description, price } = product;
+
   return (
     <div>
-      <div className="card w-96 bg-base-100 shadow-xl">
-        <figure>
-          <img
-            src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-            alt="Shoes"
-          />
-        </figure>
-        <div className="card-body">
-          <h2 className="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
+      <div className="">
+        
+          <div className="">
+            <div className="card h-96 bg-base-100 shadow-xl mb-5">
+              <figure>
+                <img className="h-36" src={image} alt="Shoes" />
+              </figure>
+              <div className=" p-3 m-3 space-y-2">
+                <div className="flex justify-between">
+                  <h2 className="">{name}</h2>
+                  <h3 className="font-semibold">Brand: {brandName}</h3>
+                </div>
+                <div className="flex justify-between font-semibold">
+                  <p>Type:</p>
+                  <p>Price: {price}</p>
+                </div>
+                <p className="font-extrabold">Rating: 8.6</p>
+                <p>Description: {description}</p>
+                <div className="card-actions justify-end">
+                  <button className="btn btn-outline">Details</button>
+                  <Link to={`/users/${product}`}><button className="btn btn-outline">Update</button></Link>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+        
       </div>
     </div>
   );

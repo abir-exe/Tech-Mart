@@ -25,10 +25,9 @@ const router = createBrowserRouter([
                 element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>
             },
             {
-                path: '/details',
+                path: '/brandDetails/:name',
                 element: <PrivateRoute><Details></Details></PrivateRoute>,
                 loader: () => fetch(`http://localhost:5000/users`),
-
             },
             {
                 path:'/login',

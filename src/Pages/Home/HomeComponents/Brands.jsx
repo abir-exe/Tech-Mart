@@ -12,7 +12,7 @@ const Brands = ({brand}) => {
     <div className="my-10">
       
 
-      <Link to="/details">
+      <Link to={`/brandDetails/${name}`}>
         {/* card */}
         <div className="card bg-base-100 shadow-xl h-52">
           <figure>
