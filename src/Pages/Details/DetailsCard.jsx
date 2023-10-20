@@ -28,7 +28,7 @@ const {name, brandName, image, description, price, _id } = product;
                 <p className="font-extrabold">Rating: 8.6</p>
                 <p>Description: {description}</p>
                 <div className="card-actions justify-end">
-                  <Link to={`/productDetails/${_id}`}><button className="btn btn-outline">Details</button></Link>
+                  <Link to={`/productDetails/${name}`}><button className="btn btn-outline">Details</button></Link>
                   <Link to={`/users/${_id}`}><button className="btn btn-outline">Update</button></Link>
                 </div>
               </div>

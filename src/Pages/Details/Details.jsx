@@ -108,6 +108,7 @@ import DetailsCard from "./DetailsCard";
 const Details = () => {
   const { name } = useParams();
 
+  console.log(name)
   const products = useLoaderData();
   console.log(products);
 
