@@ -30,7 +30,8 @@ const UpdateData = () => {
     };
     console.log(mySingleData);
 
-    fetch(`http://localhost:5000/users/${singleData._id}`, {
+    fetch(`https://techmart-101-8cs
+83gpsp-abir-mahmuds-projects.vercel.app/users/${singleData._id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

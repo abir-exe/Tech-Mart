@@ -29,7 +29,8 @@ const AddProduct = () => {
     console.log(myData);
 
     // for server
-    fetch("http://localhost:5000/users", {
+    fetch(`https://techmart-101-8cs
+83gpsp-abir-mahmuds-projects.vercel.app/users`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

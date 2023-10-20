@@ -29,12 +29,14 @@ const router = createBrowserRouter([
             {
                 path: '/brandDetails/:name',
                 element: <PrivateRoute><Details></Details></PrivateRoute>,
-                loader: () => fetch(`http://localhost:5000/users`),
+                loader: () => fetch(`https://techmart-101-8cs
+83gpsp-abir-mahmuds-projects.vercel.app/users`),
             },
             {
                 path: '/productDetails/:name',
                 element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
-                loader: () => fetch(`http://localhost:5000/users`),
+                loader: () => fetch(`https://techmart-101-8cs
+83gpsp-abir-mahmuds-projects.vercel.app/users`),
             },
             {
                 path: '/cart',
@@ -53,7 +55,8 @@ const router = createBrowserRouter([
                 element: <PrivateRoute><UpdateData></UpdateData></PrivateRoute>,
                 loader: ({params}) => {
                   console.log(params);
-                  return fetch(`http://localhost:5000/users/${params.id}`);
+                  return fetch(`https://techmart-101-8cs
+83gpsp-abir-mahmuds-projects.vercel.app/users/${params.id}`);
                 },
               },
         ]
