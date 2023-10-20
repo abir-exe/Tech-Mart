@@ -8,6 +8,7 @@ import Login from '../Pages/Login/Login';
 import Registration from '../Pages/Registration/Registration';
 import PrivateRoute from './PrivateRoute';
 import UpdateData from '../Pages/UpdateData/UpdateData';
+import ProductDetails from '../Pages/ProductDetails/ProductDetails';
 
 const router = createBrowserRouter([
     {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
                 path: '/brandDetails/:name',
                 element: <PrivateRoute><Details></Details></PrivateRoute>,
                 loader: () => fetch(`http://localhost:5000/users`),
+            },
+            {
+                path: '/productDetails:id',
+                element: <ProductDetails></ProductDetails>
             },
             {
                 path:'/login',
