@@ -6,10 +6,10 @@ const AboutUs = () => {
       
       <div className="hero min-h-screen bg-base-200 rounded-xl ">
         <div className="hero-content flex-col lg:flex-row">
-          <img src={op} className="max-w-md rounded-lg shadow-2xl" />
+          <img src={op} className="max-w-sm lg:max-w-md rounded-lg shadow-2xl" />
           <div className="lg:ml-2">
-          <h2 className="text-3xl"> About US</h2>
-            <p className="mb-5">
+          <h2 className="text-3xl "> About US</h2>
+            <p className="lg:mb-5 px-5 overflow-hidden">
               TechMart is a One-Stop Tech Shop that offers Tech Enthusiasts
               authentic Smartphones, Gadgets & Accessories from renowned brands
               so they can have first-hand experience with the real thing. We aim
@@ -17,9 +17,7 @@ const AboutUs = () => {
               service through Multichannel Shopping Stores, Online Store, EMI
               Facility, Exchange Offers, Free Home Delivery, Dedicated Service
               Centers, and many more. We built our business on clients trust
-              and we are committed to do so as long as the clients are with us!
-              We also have the vision to be Bangladesh largest tech
-              Smartphones, Gadgets & Accessories retailer. In TechMart, we
+              and  In TechMart, we
               are continuously growing ourselves to meet the challenge of a new
               age and new client base. We know that client satisfaction is a
               never-ending journey. Also, we have a strong dedicated team that

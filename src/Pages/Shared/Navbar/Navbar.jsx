@@ -1,12 +1,19 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../../Providers/AuthProvider";
+import Swal from "sweetalert2";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
 
   const handleSignOut = () => {
-    logOut().then().catch();
+    logOut().then(
+      Swal.fire(
+        'Logout Seccessfull',
+        'Successfully added',
+        'success'
+      )
+    ).catch();
   };
 
   const NavLinks = (
@@ -18,7 +25,7 @@ const Navbar = () => {
         <NavLink to="/addProduct">Add Product</NavLink>
       </li>
       <li>
-        <NavLink to="/myCart">My Cart</NavLink>
+        <NavLink to="/cart">My Cart</NavLink>
       </li>
     </>
   );

@@ -2,9 +2,8 @@ import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const UpdateData = () => {
-
-    const singleData = useLoaderData();
-    console.log(singleData)
+  const singleData = useLoaderData();
+  console.log(singleData);
 
   const handleUpdate = async (e) => {
     e.preventDefault();
@@ -15,8 +14,8 @@ const UpdateData = () => {
     const image = form.image.value;
     const price = form.price.value;
     const description = form.description.value;
-    // const rating = form.rat.value;
-    // const radio = form.rad.value
+    const category = form.category.value;
+    const rating = form.rating.value;
 
     // console.log(name, email, password)
 
@@ -26,37 +25,26 @@ const UpdateData = () => {
       image,
       price,
       description,
-      // rating,
-      // radio,
+      category,
+      rating,
     };
     console.log(mySingleData);
 
-
     fetch(`http://localhost:5000/users/${singleData._id}`, {
-            method: "PUT",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(mySingleData)
-        })
-
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-            if(data.modifiedCount > 0 ){
-                
-                
-                Swal.fire(
-                    'Product Updated',
-                    'Successfully Updated',
-                    'success'
-                  )
-
-            }
-        });
-
-  }
-  
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(mySingleData),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.modifiedCount > 0) {
+          Swal.fire("Product Updated", "Successfully Updated", "success");
+        }
+      });
+  };
 
   return (
     <div className="w-3/6 mx-auto h-full">
@@ -70,7 +58,7 @@ const UpdateData = () => {
             <span className="label-text">Name</span>
           </label>
           <input
-          defaultValue={singleData?.name}
+            defaultValue={singleData?.name}
             type="text"
             name="name"
             placeholder="Name"
@@ -83,7 +71,7 @@ const UpdateData = () => {
             <span className="label-text">Brand Name</span>
           </label>
           <input
-          defaultValue={singleData?.brandName}
+            defaultValue={singleData?.brandName}
             type="text"
             name="brandName"
             placeholder="Brand Name"
@@ -96,7 +84,7 @@ const UpdateData = () => {
             <span className="label-text">Image URL</span>
           </label>
           <input
-          defaultValue={singleData?.image}
+            defaultValue={singleData?.image}
             type="text"
             name="image"
             placeholder="Image URL"
@@ -105,37 +93,22 @@ const UpdateData = () => {
           />
         </div>
         {/* product type  */}
-        <h3 className="text-xl">Product Type</h3>
         <div className="form-control">
-          <label className="label cursor-pointer">
-            <span className="label-text">Phone</span>
-            <input type="radio" name=" rad" className="radio  :bg-blue-500" />
-          </label>
-        </div>
-        <div className="form-control">
-          <label className="label cursor-pointer">
-            <span className="label-text">Computer</span>
-            <input type="radio" name=" rad" className="radio  :bg-blue-500" />
-          </label>
-        </div>
-        <div className="form-control">
-          <label className="label cursor-pointer">
-            <span className="label-text">Headphone</span>
-            <input type="radio" name=" rad" className="radio  :bg-blue-500" />
-          </label>
-        </div>
-        <div className="form-control">
-          <label className="label cursor-pointer">
-            <span className="label-text">Accessories</span>
-            <input type="radio" name=" rad" className="radio  :bg-blue-500" />
-          </label>
+          {/* categories */}
+          <label>Choose a category:</label>
+          <select name="category" defaultChecked={singleData?.category}>
+            <option value="phone">Phone</option>
+            <option value="laptop">Laptop</option>
+            <option value="headphone">Headphone</option>
+            <option value="console">Gaming Console</option>
+          </select>
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Price</span>
           </label>
           <input
-          defaultValue={singleData?.price}
+            defaultValue={singleData?.price}
             type="text"
             name="price"
             placeholder="Price"
@@ -148,7 +121,7 @@ const UpdateData = () => {
             <span className="label-text">Short Description</span>
           </label>
           <input
-          defaultValue={singleData?.description}
+            defaultValue={singleData?.description}
             type="text"
             name="description"
             placeholder="Short Description"
@@ -157,16 +130,24 @@ const UpdateData = () => {
           />
         </div>
         {/* rating  */}
-        <label className="label">
-          <span className="label-text">Rating</span>
-        </label>
-        <div className="rating space-x-2">
-          <input type="radio" name="rat" className="mask mask-star" />
-          <input type="radio" name="rat" className="mask mask-star" />
-          <input type="radio" name="rat" className="mask mask-star" />
-          <input type="radio" name="rat" className="mask mask-star" />
-          <input type="radio" name="rat" className="mask mask-star" />
-        </div>
+        {/* rating  */}
+        <div className="form-control">
+          {/* categories */}
+          <label>Rating</label>
+  <select name="rating">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    
+  </select>
+  </div>
 
         <div className="form-control mt-6">
           <button className="btn glass outline">Submit</button>
