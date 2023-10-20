@@ -7,6 +7,7 @@ import Details from '../Pages/Details/Details';
 import Login from '../Pages/Login/Login';
 import Registration from '../Pages/Registration/Registration';
 import PrivateRoute from './PrivateRoute';
+import UpdateData from '../Pages/UpdateData/UpdateData';
 
 const router = createBrowserRouter([
     {
@@ -36,7 +37,15 @@ const router = createBrowserRouter([
             {
                 path: '/register',
                 element: <Registration></Registration>
-            }
+            },
+            {
+                path: "/users/:id",
+                element: <UpdateData></UpdateData>,
+                loader: ({params}) => {
+                  console.log(params);
+                  return fetch(`http://localhost:5000/users/${params.id}`);
+                },
+              },
         ]
     }
 ])

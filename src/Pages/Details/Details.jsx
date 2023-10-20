@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import p1 from "../../../public/images/details/1.jpg";
 import p2 from "../../../public/images/details/2.jpg";
 import p3 from "../../../public/images/details/3.jpg";
@@ -59,32 +59,34 @@ const Details = () => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 my-10">
+
+      <div>
+        {
+           users.map(item => item.brandName)
         
+        }
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 my-10">
         {users.map((user) => (
           <div className="" key={user._id}>
             <div className="card h-96 bg-base-100 shadow-xl mb-5">
               <figure>
-                <img
-                className="h-36"
-                  src={user.image}
-                  alt="Shoes"
-                />
+                <img className="h-36" src={user.image} alt="Shoes" />
               </figure>
               <div className=" p-3 m-3 space-y-2">
                 <div className="flex justify-between">
-                <h2 className="">{user.name}</h2>
-                <h3 className="font-semibold">Brand: {user.brandName}</h3>
+                  <h2 className="">{user.name}</h2>
+                  <h3 className="font-semibold">Brand: {user.brandName}</h3>
                 </div>
                 <div className="flex justify-between font-semibold">
-                <p>Type:</p>
-                <p>Price: {user.price}</p>
+                  <p>Type:</p>
+                  <p>Price: {user.price}</p>
                 </div>
                 <p className="font-extrabold">Rating: 8.6</p>
                 <p>Description: {user.description}</p>
                 <div className="card-actions justify-end">
                   <button className="btn btn-outline">Details</button>
-                  <button className="btn btn-outline">Update</button>
+                  <Link to={`/users/${user._id}`}><button className="btn btn-outline">Update</button></Link>
                 </div>
               </div>
             </div>
