@@ -123,8 +123,8 @@ const Details = () => {
       {
         (filteredProducts.length> 0)? <div>
         <div className="w-9/12 mx-auto my-10">
-          {" "}
-          slider of offers{" "}
+          
+          
           <div className="carousel mb-10 h-[80vh] ">
             <div id="slide1" className="carousel-item relative w-full">
               <img src={p1} className="w-full" />
