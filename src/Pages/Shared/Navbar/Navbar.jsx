@@ -53,7 +53,7 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-[2] p-2 shadow bg-base-100 rounded-box lg:w-52"
             >
               {NavLinks}
             </ul>
@@ -67,7 +67,7 @@ const Navbar = () => {
         <div className="navbar-end">
         <div>
               {user && (
-                <div className="flex  items-center justify-center gap-2 mr-2 text-white">
+                <div className="flex flex-col lg:flex-row  items-center justify-center gap-2 mr-2 text-white">
                   <h3>User: {user.displayName}</h3>
                   <div className="avatar">
                     <div className="w-12 rounded-full">
