@@ -2,7 +2,7 @@ import op from "../../../../public/images/aboutUs/Oneplus.jpg";
 
 const AboutUs = () => {
   return (
-    <div>
+  
       
       <div className="hero min-h-screen bg-base-200 rounded-xl ">
         <div className="hero-content flex-col lg:flex-row">
@@ -37,7 +37,7 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-    </div>
+    
   );
 };
 
