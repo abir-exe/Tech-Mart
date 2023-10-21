@@ -9,3 +9,12 @@ Features of this website:
 
 
 client site live link:  https://techmart001.web.app/
+
+
+
+N.B: if the site shows error while loading data, then please just copy the following server link and just open it in your browser. then there will be no problem loading the data.
+
+server links:
+https://techmartfinall-w97vy2y6s-abir-mahmuds-projects.vercel.app/ 
+https://techmartfinall-w97vy2y6s-abir-mahmuds-projects.vercel.app/users 
+https://techmartfinall-w97vy2y6s-abir-mahmuds-projects.vercel.app/cart 
