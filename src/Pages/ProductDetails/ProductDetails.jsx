@@ -30,7 +30,7 @@ const ProductDetails = () => {
     
     
     try {
-        const res = await fetch('http://localhost:5000/cartItems', {
+        const res = await fetch('https://finaltechmart-87ntzw4qo-abir-mahmuds-projects.vercel.app/cartItems', {
             method: "POST",
                 headers: {
                     "Content-Type": "application/json",
