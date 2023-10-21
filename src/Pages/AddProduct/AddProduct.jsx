@@ -29,7 +29,7 @@ const AddProduct = () => {
     console.log(myData);
 
     // for server
-    fetch(`https://finaltechmart-87ntzw4qo-abir-mahmuds-projects.vercel.app/users`, {
+    fetch(`https://techmartfinall-w97vy2y6s-abir-mahmuds-projects.vercel.app/users`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
