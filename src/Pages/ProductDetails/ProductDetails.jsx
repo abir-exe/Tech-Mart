@@ -20,7 +20,30 @@ const ProductDetails = () => {
   const foundProduct = products.find((product) => product.name === name);
   console.log(foundProduct);
 
+  const handleCart = async (e) => {
+    e.preventDefault();
 
+    
+
+    
+    
+    
+    try {
+        const res = await fetch('http://localhost:5000/cartItems', {
+            method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(foundProduct),
+        });
+        const data = await res.json();
+        console.log(data);
+        
+    } catch (error) {
+        console.error(error)
+    }
+
+}
 
 
 
@@ -48,7 +71,7 @@ const ProductDetails = () => {
               <p className="lg:py-6 font-semibold">
                 Description: {foundProduct.description}
               </p>
-              <button className="btn btn-outline">Add to Cart</button>
+              <button onClick={handleCart} className="btn btn-outline">Add to Cart</button>
             </div>
           </div>
         </div>
