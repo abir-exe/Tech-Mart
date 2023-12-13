@@ -10,7 +10,7 @@ import Marquee from "react-fast-marquee";
 
 const Home = () => {
   const brands = useLoaderData();
-  console.log(brands);
+  // console.log(brands);
 
   // Dark- light theme toggle 
   // const [isDarkMode, setIsDarkMode] = useState(false);

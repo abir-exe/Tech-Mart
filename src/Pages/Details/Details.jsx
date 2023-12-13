@@ -14,7 +14,7 @@ const Details = () => {
   const products = useLoaderData();
   console.log(products);
 
-  const filteredProducts = products.filter(
+  const filteredProducts = products?.filter(
     (product) => product.brandName === name
   );
 

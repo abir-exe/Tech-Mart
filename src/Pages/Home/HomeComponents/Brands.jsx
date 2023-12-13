@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Brands = ({brand}) => {
 
   const { name, image} = brand || {};
-  console.log(brand);
+  // console.log(brand);
 
   return (
     <div className="my-10">

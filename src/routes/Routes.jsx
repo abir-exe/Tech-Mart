@@ -29,17 +29,17 @@ const router = createBrowserRouter([
             {
                 path: '/brandDetails/:name',
                 element: <PrivateRoute><Details></Details></PrivateRoute>,
-                loader: () => fetch(`https://techmartfinall-w97vy2y6s-abir-mahmuds-projects.vercel.app/users`),
+                loader: () => fetch(`https://techmartfinall.vercel.app/users`),
             },
             {
                 path: '/productDetails/:name',
                 element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
-                loader: () => fetch(`https://techmartfinall-w97vy2y6s-abir-mahmuds-projects.vercel.app/users`),
+                loader: () => fetch(`https://techmartfinall.vercel.app/users`),
             },
             {
                 path: '/cart',
                 element:<PrivateRoute> <Cart></Cart></PrivateRoute>,
-                loader: () => fetch(`https://techmartfinall-w97vy2y6s-abir-mahmuds-projects.vercel.app/cart`),
+                loader: () => fetch(`https://techmartfinall.vercel.app/cart`),
                 
             },
             {
@@ -55,8 +55,8 @@ const router = createBrowserRouter([
                 element: <PrivateRoute><UpdateData></UpdateData></PrivateRoute>,
                 loader: ({params}) => {
                   console.log(params);
-                  return fetch(`https://techmartfinall-w97vy2y6s-abir-mahmuds-projects.vercel.app/users/${params.id}`);
-                },
+                  return fetch(`https://techmartfinall.vercel.app/users/${params.id}`);
+                }, 
               },
         ]
     }

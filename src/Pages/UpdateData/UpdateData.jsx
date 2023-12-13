@@ -30,7 +30,7 @@ const UpdateData = () => {
     };
     console.log(mySingleData);
 
-    fetch(`https://techmartfinall-w97vy2y6s-abir-mahmuds-projects.vercel.app/users/${singleData._id}`, {
+    fetch(`https://techmartfinall.vercel.app/users/${singleData._id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

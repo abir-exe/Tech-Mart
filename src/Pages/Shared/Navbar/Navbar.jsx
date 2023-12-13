@@ -7,6 +7,9 @@ const Navbar = () => {
   // theme 
   const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : "light" )
   
+
+ 
+
   const handleToggle = e => {
     if(e.target.checked) {
       setTheme("dark");
@@ -34,6 +37,8 @@ const Navbar = () => {
       )
     ).catch();
   };
+
+  console.log(user?.displayName)
 
   const NavLinks = (
     <>
@@ -77,8 +82,10 @@ const Navbar = () => {
               {NavLinks}
             </ul>
           </div>
+          <div className="flex flex-col md:flex-row lg:flex-row">
           <img className="w-12 rounded-full" src="https://i.ibb.co/Nrx6n5P/Yellow-Modern-Gadget-Store-Logo.jpg" alt="" />
           <a className="btn btn-ghost normal-case text-xl">Tech Mart</a>
+          </div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{NavLinks}</ul>
@@ -87,10 +94,10 @@ const Navbar = () => {
         <div>
               {user && (
                 <div className="flex flex-col lg:flex-row  items-center justify-center gap-2 mr-2 text-white">
-                  <h3>User: {user.displayName}</h3>
+                  <h3>User: {user?.displayName}</h3>
                   <div className="avatar">
                     <div className="w-12 rounded-full">
-                      <img src={user.photoURL} />
+                      <img src={user?.photoURL} />
                     </div>
                   </div>
                 </div>

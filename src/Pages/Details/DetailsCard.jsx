@@ -30,7 +30,7 @@ const {name, brandName, image, description, price, _id } = product;
                 <div className="card-actions justify-end">
                   <Link to={`/productDetails/${name}`}><button className="btn btn-outline">Details</button></Link>
                   <Link to={`/users/${_id}`}><button className="btn btn-outline">Update</button></Link>
-                </div>
+                </div> 
               </div>
             </div>
           </div>

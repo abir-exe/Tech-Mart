@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
@@ -7,11 +7,19 @@ import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import app from "../../FIrebase/Firebase.config";
 
 const Registration = () => {
+
+ 
+
   const [registerError, setRegisterError] = useState("");
   const [success, setSuccess] = useState("");
 
+  const location = useLocation();
   const navigate = useNavigate();
-  const { createUser } = useContext(AuthContext);
+  const { createUser, updateUserProfile } = useContext(AuthContext);
+
+  function refreshPage() {
+    window.location.reload(false);
+  }
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -43,7 +51,10 @@ const Registration = () => {
     // create user
     createUser(email, password)
       .then((result) => {
+        updateUserProfile(name, photo);
         console.log(result.user);
+        navigate(location?.state ? location.state : "/");
+        refreshPage()
         Swal.fire("Welcome", "Account created successfully", "success");
       })
       .catch((error) => {

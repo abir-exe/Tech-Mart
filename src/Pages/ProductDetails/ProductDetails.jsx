@@ -30,7 +30,7 @@ const ProductDetails = () => {
     
     
     try {
-        const res = await fetch('https://techmartfinall-w97vy2y6s-abir-mahmuds-projects.vercel.app/cartItems', {
+        const res = await fetch('https://techmartfinall.vercel.app/cartItems', {
             method: "POST",
                 headers: {
                     "Content-Type": "application/json",

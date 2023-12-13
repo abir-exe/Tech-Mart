@@ -17,7 +17,7 @@ const Cart = () => {
   const handleDelete = async (_id) => {
     console.log(_id);
 
-       fetch(`https://techmartfinall-w97vy2y6s-abir-mahmuds-projects.vercel.app/cart/${_id}`, {
+       fetch(`https://techmartfinall.vercel.app/cart/${_id}`, {
         method: "DELETE",
        })
        .then(res => res.json())
