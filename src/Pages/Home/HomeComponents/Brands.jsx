@@ -23,7 +23,7 @@ const Brands = ({brand}) => {
           </div>
         </div>
       </Link>
-    </div>
+    </div> 
   );
 };
 
